@@ -1,0 +1,2027 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCSMTLA 4CS(S) Timetable</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Logo_New_Ucsmtla.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-3 md:p-8">
+    <div
+      class="container mx-auto max-w-6xl bg-white shadow-xl rounded-xl overflow-hidden"
+    >
+      <div class="bg-slate-800 text-white p-6 rounded">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6"
+        >
+          <img
+            src="Logo_New_Ucsmtla.png"
+            alt="UCSMTLA Logo"
+            class="h-20 w-20 md:h-24 md:w-24 object-contain bg-white rounded p-1 shadow-md"
+          />
+
+          <div class="text-center md:text-left">
+            <h1 class="text-xl md:text-2xl font-bold">
+              University of Computer Studies, Meiktila
+            </h1>
+            <p class="text-slate-300 text-sm mt-1">
+              2025-2026 Academic Year • Semester VIII • Fourth Year (CS)(Senior)
+            </p>
+            <div
+              class="mt-2 flex flex-wrap justify-center md:justify-center gap-3"
+            >
+              <div class="bg-slate-700 px-3 py-1 rounded text-xs font-mono">
+                Room: E-5
+              </div>
+              <div
+                class="text-green-400 text-sm font-bold flex items-center gap-1"
+              >
+                <span class="live-dot"></span>
+                <span id="live-clock">--:--:--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 md:p-6">
+        <div class="hidden md:block table-responsive">
+          <table class="table table-bordered border-gray-300 mb-0">
+            <thead class="table-header">
+              <tr>
+                <th class="w-16">Day</th>
+                <th class="w-1/6">8:30 - 9:30</th>
+                <th class="w-1/6">9:35 - 10:35</th>
+                <th class="w-1/6">10:40 - 11:40</th>
+                <th class="w-10">Lunch</th>
+                <th class="w-1/6">12:40 - 1:40</th>
+                <th class="w-1/6">1:45 - 2:45</th>
+                <th class="w-1/6">2:50 - 3:50</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-header fw-bold">MON</td>
+                <td id="d1-s0"><span class="subject-code">CST-4211</span></td>
+                <td id="d1-s1"><span class="subject-code">CS-4214</span></td>
+                <td id="d1-s2"><span class="subject-code">CS-4216</span></td>
+
+                <td rowspan="5" class="lunch-break-col" id="lunch-col">
+                  <span class="rotate-360 block whitespace-nowrap"
+                    >LUNCH TIME</span
+                  >
+                </td>
+
+                <td id="d1-s4">
+                  <span class="subject-code">CS-4225</span
+                  ><span class="lab-tag">(Lab)</span>
+                </td>
+                <td colspan="2" class="bg-blue-50" id="d1-s56">
+                  <span class="subject-code">CST-4242</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-header fw-bold">TUE</td>
+                <td colspan="2" class="bg-blue-50" id="d2-s01">
+                  <span class="subject-code">CST-4242</span>
+                </td>
+                <td id="d2-s2">
+                  <span class="subject-code">CS-4223</span
+                  ><span class="lab-tag">(Lab)</span>
+                </td>
+                <td id="d2-s4"><span class="subject-code">CST-4211</span></td>
+                <td id="d2-s5"><span class="subject-code">CST-4257</span></td>
+                <td id="d2-s6"><span class="subject-code">CS-4214</span></td>
+              </tr>
+              <tr>
+                <td class="table-header fw-bold">WED</td>
+                <td colspan="2" class="bg-blue-50" id="d3-s01">
+                  <span class="subject-code">CS-4223</span>
+                </td>
+                <td id="d3-s2"><span class="subject-code">CST-4211</span></td>
+                <td id="d3-s4">
+                  <span class="subject-code">CS-4216</span
+                  ><span class="lab-tag">(Lab)</span>
+                </td>
+                <td id="d3-s5"><span class="subject-code">CS-4225</span></td>
+                <td id="d3-s6"><span class="subject-code">CST-4257</span></td>
+              </tr>
+              <tr>
+                <td class="table-header fw-bold">THU</td>
+                <td id="d4-s0"><span class="subject-code">CS-4225</span></td>
+                <td id="d4-s1"><span class="subject-code">CS-4216</span></td>
+                <td id="d4-s2">
+                  <span class="subject-code">CS-4214</span
+                  ><span class="lab-tag">(Lab)</span>
+                </td>
+                <td class="bg-gray-100 text-gray-400 fw-bold" id="d4-s4">
+                  Self-Study
+                </td>
+                <td id="d4-s5"><span class="subject-code">CST-4257</span></td>
+                <td id="d4-s6">
+                  <span class="subject-code">CS-4223</span
+                  ><span class="lab-tag">(Lab)</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-header fw-bold">FRI</td>
+                <td id="d5-s0"><span class="subject-code">CS-4214</span></td>
+                <td id="d5-s1"><span class="subject-code">CS-4216</span></td>
+                <td id="d5-s2"><span class="subject-code">CST-4211</span></td>
+                <td class="bg-gray-100 text-gray-400 fw-bold" id="d5-s4">
+                  Library
+                </td>
+                <td id="d5-s5"><span class="subject-code">CST-4257</span></td>
+                <td id="d5-s6">
+                  <span class="subject-code">CS-4225</span
+                  ><span class="lab-tag">(Lab)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="md:hidden space-y-6">
+          <div class="bg-white rounded-lg border shadow-sm mobile-card">
+            <div
+              class="bg-gray-100 p-3 font-bold border-b flex justify-between"
+            >
+              <span>MONDAY</span>
+              <span class="text-xs font-normal text-gray-500 mt-1"
+                >8:30 AM - 3:50 PM</span
+              >
+            </div>
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between border-b pb-2" id="mob-d1-s0">
+                <span class="mobile-time">08:30 - 09:30</span>
+                <span class="mobile-subject">CST-4211</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d1-s1">
+                <span class="mobile-time">09:35 - 10:35</span>
+                <span class="mobile-subject">CS-4214</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d1-s2">
+                <span class="mobile-time">10:40 - 11:40</span>
+                <span class="mobile-subject">CS-4216</span>
+              </div>
+              <div
+                class="text-center text-xs text-gray-600 bg-gray-50 py-1 rounded"
+                id="mob-d1-s3"
+              >
+                Lunch Break
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d1-s4">
+                <span class="mobile-time">12:40 - 01:40</span>
+                <span class="mobile-subject"
+                  >CS-4225 <span class="text-red-500">(Lab)</span></span
+                >
+              </div>
+              <div class="flex justify-between" id="mob-d1-s56">
+                <span class="mobile-time">01:45 - 03:50</span>
+                <span class="mobile-subject">CST-4242</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg border shadow-sm mobile-card"
+            style="border-left-color: #8b5cf6"
+          >
+            <div
+              class="bg-gray-100 p-3 font-bold border-b flex justify-between"
+            >
+              <span>TUESDAY</span>
+              <span class="text-xs font-normal text-gray-500 mt-1"
+                >8:30 AM - 3:50 PM</span
+              >
+            </div>
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between border-b pb-2" id="mob-d2-s01">
+                <span class="mobile-time">08:30 - 10:35</span>
+                <span class="mobile-subject">CST-4242</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d2-s2">
+                <span class="mobile-time">10:40 - 11:40</span>
+                <span class="mobile-subject"
+                  >CS-4223 <span class="text-red-500">(Lab)</span></span
+                >
+              </div>
+              <div
+                class="text-center text-xs text-gray-600 bg-gray-50 py-1 rounded"
+                id="mob-d2-s3"
+              >
+                Lunch Break
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d2-s4">
+                <span class="mobile-time">12:40 - 01:40</span>
+                <span class="mobile-subject">CST-4211</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d2-s5">
+                <span class="mobile-time">01:45 - 02:45</span>
+                <span class="mobile-subject">CST-4257</span>
+              </div>
+              <div class="flex justify-between" id="mob-d2-s6">
+                <span class="mobile-time">02:50 - 03:50</span>
+                <span class="mobile-subject">CS-4214</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg border shadow-sm mobile-card"
+            style="border-left-color: #ec4899"
+          >
+            <div
+              class="bg-gray-100 p-3 font-bold border-b flex justify-between"
+            >
+              <span>WEDNESDAY</span>
+              <span class="text-xs font-normal text-gray-500 mt-1"
+                >8:30 AM - 3:50 PM</span
+              >
+            </div>
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between border-b pb-2" id="mob-d3-s01">
+                <span class="mobile-time">08:30 - 10:35</span>
+                <span class="mobile-subject">CS-4223</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d3-s2">
+                <span class="mobile-time">10:40 - 11:40</span>
+                <span class="mobile-subject">CST-4211</span>
+              </div>
+              <div
+                class="text-center text-xs text-gray-600 bg-gray-50 py-1 rounded"
+                id="mob-d3-s3"
+              >
+                Lunch Break
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d3-s4">
+                <span class="mobile-time">12:40 - 01:40</span>
+                <span class="mobile-subject"
+                  >CS-4216 <span class="text-red-500">(Lab)</span></span
+                >
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d3-s5">
+                <span class="mobile-time">01:45 - 02:45</span>
+                <span class="mobile-subject">CS-4225</span>
+              </div>
+              <div class="flex justify-between" id="mob-d3-s6">
+                <span class="mobile-time">02:50 - 03:50</span>
+                <span class="mobile-subject">CST-4257</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg border shadow-sm mobile-card"
+            style="border-left-color: #f59e0b"
+          >
+            <div
+              class="bg-gray-100 p-3 font-bold border-b flex justify-between"
+            >
+              <span>THURSDAY</span>
+              <span class="text-xs font-normal text-gray-500 mt-1"
+                >8:30 AM - 3:50 PM</span
+              >
+            </div>
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between border-b pb-2" id="mob-d4-s0">
+                <span class="mobile-time">08:30 - 09:30</span>
+                <span class="mobile-subject">CS-4225</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d4-s1">
+                <span class="mobile-time">09:35 - 10:35</span>
+                <span class="mobile-subject">CS-4216</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d4-s2">
+                <span class="mobile-time">10:40 - 11:40</span>
+                <span class="mobile-subject"
+                  >CS-4214 <span class="text-red-500">(Lab)</span></span
+                >
+              </div>
+              <div
+                class="text-center text-xs text-gray-600 bg-gray-50 py-1 rounded"
+                id="mob-d4-s3"
+              >
+                Lunch Break
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d4-s4">
+                <span class="mobile-time">12:40 - 01:40</span>
+                <span class="mobile-subject text-gray-900 fw-bold"
+                  >Self-Study</span
+                >
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d4-s5">
+                <span class="mobile-time">01:45 - 02:45</span>
+                <span class="mobile-subject">CST-4257</span>
+              </div>
+              <div class="flex justify-between" id="mob-d4-s6">
+                <span class="mobile-time">02:50 - 03:50</span>
+                <span class="mobile-subject"
+                  >CS-4223 <span class="text-red-500">(Lab)</span></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg border shadow-sm mobile-card"
+            style="border-left-color: #10b981"
+          >
+            <div
+              class="bg-gray-100 p-3 font-bold border-b flex justify-between"
+            >
+              <span>FRIDAY</span>
+              <span class="text-xs font-normal text-gray-500 mt-1"
+                >8:30 AM - 3:50 PM</span
+              >
+            </div>
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between border-b pb-2" id="mob-d5-s0">
+                <span class="mobile-time">08:30 - 09:30</span>
+                <span class="mobile-subject">CS-4214</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d5-s1">
+                <span class="mobile-time">09:35 - 10:35</span>
+                <span class="mobile-subject">CS-4216</span>
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d5-s2">
+                <span class="mobile-time">10:40 - 11:40</span>
+                <span class="mobile-subject">CST-4211</span>
+              </div>
+              <div
+                class="text-center text-xs text-gray-600 bg-gray-50 py-1 rounded"
+                id="mob-d5-s3"
+              >
+                Lunch Break
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d5-s4">
+                <span class="mobile-time">12:40 - 01:40</span>
+                <span class="mobile-subject text-gray-900 fw-bold"
+                  >Library</span
+                >
+              </div>
+              <div class="flex justify-between border-b pb-2" id="mob-d5-s5">
+                <span class="mobile-time">01:45 - 02:45</span>
+                <span class="mobile-subject">CST-4257</span>
+              </div>
+              <div class="flex justify-between" id="mob-d5-s6">
+                <span class="mobile-time">02:50 - 03:50</span>
+                <span class="mobile-subject"
+                  >CS-4225 <span class="text-red-500">(Lab)</span></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Start Course Instructors Start -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+          <h4 class="text-xl font-bold mb-6 text-slate-800 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            Course Instructors
+          </h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- CST-4211 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden max-w-sm"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full"
+                  >CST-4211</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Distributed and Parallel Computing
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Daw Theint Thu San &nbsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cst4211')"
+                    class="mt-3 px-3 py-2 bg-blue-100 text-blue-700 hover:bg-blue-200 hover:text-blue-800 text-xs font-bold uppercase rounded-lg transition-colors duration-200 ease-in-out"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cst4211"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-blue-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cst4211')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-3">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CST-4211</h4>
+                      <p class="text-xs text-slate-700">Parallel Computing</p>
+                    </div>
+                    <span
+                      class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Daw Theint Thu San</span
+                    >
+                  </div>
+
+                  <div
+                    class="space-y-2 max-h-60 overflow-y-auto pr-1 custom-scrollbar"
+                  >
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          />
+                        </svg>
+                        <span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial 1</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Done
+                        </span>
+                        <span class="text-sm text-slate-700">16.12.2025</span>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          />
+                        </svg>
+                        <span class="text-sm text-slate-700 font-semibold"
+                          >Quiz 1</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Done
+                        </span>
+                        <span class="text-sm text-slate-700">30.12.2025</span>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          />
+                        </svg>
+                        <span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial 2</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Done
+                        </span>
+                        <span class="text-sm text-slate-700">13.1.2026</span>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex items-center justify-between p-2 bg-orange-50 border border-orange-200 rounded hover:bg-orange-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-orange-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          />
+                        </svg>
+                        <span class="text-sm text-slate-700 font-semibold"
+                          >RMI Project</span
+                        >
+                      </div>
+                      <span
+                        class="text-xs font-bold text-orange-500 bg-orange-100 px-2 py-0.5 rounded"
+                        >TBA</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cst4211')"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none transition duration-150"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CST-4242 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full"
+                  >CST-4242</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Modeling and Simulations
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Daw Myint Myint Toe &nbsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cst4242')"
+                    class="mt-3 px-2 py-2 bg-indigo-100 text-indigo-700 hover:bg-indigo-200 text-xs font-bold uppercase rounded-lg transition-colors"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cst4242"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-indigo-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cst4242')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-2">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CST-4242</h4>
+                      <p class="text-xs text-slate-700">
+                        Modeling and Simulations
+                      </p>
+                    </div>
+                    <span
+                      class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Daw Myint Myint Toe</span
+                    >
+                  </div>
+                  <div
+                    class="space-y-2 max-h-60 overflow-y-auto pr-1 custom-scrollbar"
+                  >
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment 1</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">15.12.2025</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial 1</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">23.12.2025</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment 2</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">30.12.2025</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial 2</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">5.1.2026</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-indigo-50 border border-indigo-200 rounded hover:bg-indigo-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment 3</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">13.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-indigo-50 border border-indigo-200 rounded hover:bg-indigo-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment 4</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">20.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-indigo-50 border border-indigo-200 rounded hover:bg-indigo-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial 3</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">26.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-indigo-50 border border-indigo-200 rounded hover:bg-indigo-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment 5</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">2.2.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-purple-50 border border-purple-200 rounded hover:bg-purple-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-purple-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Quiz</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">3.2.2026</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cst4242')"
+                    class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CS-4223 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-pink-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-1 rounded-full"
+                  >CS-4223</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Object-Oriented Design (OODD)
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Daw Khin Htay &emsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cs4223')"
+                    class="mt-3 px-3 py-2 bg-pink-100 text-pink-700 hover:bg-pink-200 text-xs font-bold uppercase rounded-lg transition-colors"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cs4223"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-pink-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cs4223')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-3">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CS-4223</h4>
+                      <p class="text-xs text-slate-700">
+                        Object-Oriented Design (OODD)
+                      </p>
+                    </div>
+                    <span
+                      class="bg-pink-100 text-pink-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Daw Khin Htay</span
+                    >
+                  </div>
+                  <div
+                    class="space-y-2 max-h-60 overflow-y-auto pr-1 custom-scrollbar"
+                  >
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial I</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">5.12.2025</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial II</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">15.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment I</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">15.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Quiz I</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">5.2.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment II</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">5.2.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial III</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">12.2.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Lab Test</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">19.2.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Project</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">4.3.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Project</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">11.3.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-pink-50 border border-pink-200 rounded hover:bg-pink-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-pink-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Project</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">18.3.2026</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cs4223')"
+                    class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CS-4214 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded-full"
+                  >CS-4214</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Advanced AI + Machine Learning
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Dr. Thidar Win &emsp; &emsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cs4214')"
+                    class="mt-3 px-3 py-2 bg-purple-100 text-purple-700 hover:bg-purple-200 text-xs font-bold uppercase rounded-lg transition-colors"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cs4214"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-purple-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cs4214')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-2">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CS-4214</h4>
+                      <p class="text-xs text-slate-700">
+                        Advanced AI + Machine Learning
+                      </p>
+                    </div>
+                    <span
+                      class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Dr. Thidar Win</span
+                    >
+                  </div>
+                  <div class="p-4 text-center text-gray-500 text-sm">
+                    No Data yet.
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cs4214')"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CS-4225 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-teal-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded-full"
+                  >CS-4225</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Advanced Database System
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Daw Zin Mar Naing &nbsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cs4225')"
+                    class="mt-3 px-3 py-2 bg-teal-100 text-teal-700 hover:bg-teal-200 text-xs font-bold uppercase rounded-lg transition-colors"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cs4225"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-teal-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cs4225')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-2">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CS-4225</h4>
+                      <p class="text-xs text-slate-700">
+                        Advanced Database System
+                      </p>
+                    </div>
+                    <span
+                      class="bg-teal-100 text-teal-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Daw Zin Mar Naing</span
+                    >
+                  </div>
+                  <div class="p-4 text-center text-gray-500 text-sm">
+                    No data yet.
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cs4225')"
+                    class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CS-4216 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-full"
+                  >CS-4216</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Cloud Computing
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Daw Ei Ei Mon &emsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cs4216')"
+                    class="mt-3 px-3 py-2 bg-orange-100 text-orange-700 hover:bg-orange-200 text-xs font-bold uppercase rounded-lg transition-colors"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cs4216"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-orange-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cs4216')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-2">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CS-4216</h4>
+                      <p class="text-xs text-slate-700">Cloud Computing</p>
+                    </div>
+                    <span
+                      class="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Daw Ei Ei Mon</span
+                    >
+                  </div>
+                  <div class="p-4 text-center text-gray-500 text-sm">
+                    No data yet.
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cs4216')"
+                    class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- CST-4257 -->
+            <div
+              class="group bg-white p-4 rounded-xl border border-gray-200 hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+            >
+              <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500"></div>
+              <div class="ml-2">
+                <span
+                  class="text-xs font-bold text-cyan-600 bg-cyan-50 px-2 py-1 rounded-full"
+                  >CST-4257</span
+                >
+                <h5 class="font-bold text-slate-800 mt-2 leading-tight">
+                  Business Information System (e-Commerce)
+                </h5>
+                <p class="text-sm text-slate-600 mt-2 border-t pt-2 fw-bold">
+                  Daw Ni Ni Khaing &emsp;
+                  <!-- <button
+                    onclick="toggleModal('modal-cst4257')"
+                    class="mt-3 px-3 py-2 bg-cyan-100 text-cyan-700 hover:bg-cyan-200 text-xs font-bold uppercase rounded-lg transition-colors"
+                  >
+                    View Assessment
+                  </button> -->
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="modal-cst4257"
+              class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full"
+            >
+              <div
+                class="relative top-1/2 -translate-y-1/2 mx-auto p-0 border w-11/12 md:w-1/3 shadow-lg rounded-lg bg-white overflow-hidden"
+              >
+                <div
+                  class="bg-cyan-50 px-4 py-3 border-b border-gray-200 flex justify-between items-center"
+                >
+                  <h3 class="font-bold text-slate-800 text-lg">
+                    Tutorial & Assignment
+                  </h3>
+                  <button
+                    onclick="toggleModal('modal-cst4257')"
+                    class="text-gray-500 hover:text-red-500 focus:outline-none"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <div class="flex justify-between items-end mb-3">
+                    <div>
+                      <h4 class="text-lg font-bold text-slate-800">CST-4257</h4>
+                      <p class="text-xs text-slate-700">(e-Commence)</p>
+                    </div>
+                    <span
+                      class="bg-cyan-100 text-cyan-700 text-[10px] font-bold px-2 py-0.5 rounded"
+                      >Daw Ni Ni Khaing</span
+                    >
+                  </div>
+                  <div
+                    class="space-y-2 max-h-60 overflow-y-auto pr-1 custom-scrollbar"
+                  >
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial I</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">17.12.2025</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment I</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">23.12.2025</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-emerald-50 border border-emerald-200 rounded"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-emerald-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial II</span
+                        >
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <span
+                          class="flex items-center bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-200 uppercase"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-3 w-3 mr-1"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clip-rule="evenodd"
+                            /></svg
+                          >Done</span
+                        ><span class="text-sm text-slate-700">6.1.2026</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-orange-50 border border-orange-200 rounded hover:bg-orange-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-orange-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment II</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">14.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-green-50 border border-green-200 rounded hover:bg-green-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-green-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Tutorial III</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">20.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-purple-50 border border-purple-200 rounded hover:bg-purple-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-purple-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Quiz I</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">22.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-purple-50 border border-purple-200 rounded hover:bg-purple-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-purple-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Quiz II</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">29.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-orange-50 border border-orange-200 rounded hover:bg-orange-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-orange-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Assignment III</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">30.1.2026</span>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-2 bg-purple-50 border border-purple-200 rounded hover:bg-purple-100 transition-colors"
+                    >
+                      <div class="flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 text-purple-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          /></svg
+                        ><span class="text-sm text-slate-700 font-semibold"
+                          >Quiz III</span
+                        >
+                      </div>
+                      <span class="text-sm text-slate-700">5.2.2026</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-end">
+                  <button
+                    onclick="toggleModal('modal-cst4257')"
+                    class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Today Model -->
+      <div
+        id="modal-today"
+        class="fixed inset-0 bg-slate-900/60 hidden z-[60] flex items-center justify-center backdrop-blur-sm transition-opacity duration-300 p-4 overflow-y-auto"
+      >
+        <div
+          class="relative w-full max-w-sm bg-white shadow-2xl rounded-3xl ring-1 ring-black/5 flex flex-col my-auto"
+        >
+          <div
+            class="px-6 pt-6 pb-2 bg-white flex justify-between items-start rounded-t-3xl"
+          >
+            <div>
+              <p
+                class="text-indigo-600 text-[18px] font-black uppercase tracking-widest mb-1"
+                id="modal-today-day"
+              >
+                TODAY
+              </p>
+              <div class="flex items-baseline gap-3">
+                <h2
+                  class="text-3xl font-black text-slate-900 tracking-tight"
+                  id="modal-today-date"
+                >
+                  --
+                </h2>
+                <span
+                  class="text-base font-bold text-green-600"
+                  id="modal-today-time"
+                  >--:--:--</span
+                >
+              </div>
+            </div>
+            <button
+              onclick="closeTodayModal()"
+              class="bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-full p-2 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div id="modal-today-content" class="px-2 py-2 bg-white h-auto"></div>
+
+          <div class="px-6 pb-6 pt-2 bg-white rounded-b-3xl">
+            <button
+              onclick="closeTodayModal()"
+              class="w-full bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold py-3.5 rounded-2xl transition-all shadow-lg active:scale-95"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="mt-16 pb-8 text-center select-none">
+        <div
+          class="w-16 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mb-5 opacity-25"
+        ></div>
+
+        <p class="text-slate-500 text-sm font-medium tracking-wide">
+          Crafted by
+          <span
+            class="font-black bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            >NOVICC
+          </span>
+        </p>
+
+        <p
+          class="text-[10px] text-slate-600 mt-2 uppercase tracking-[0.2em] font-semibold opacity-70"
+        >
+          &copy; 2026. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
